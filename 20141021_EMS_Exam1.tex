@@ -178,15 +178,15 @@ where $h_r$ is the difference between the lens semi-diameter and the mount semi-
 \end{homeworkSection}
 
 \begin{homeworkSection}{(b)}
-In there is some cocentricity error between the optical axis and the physical axis, we can drill threaded holes and use nylon screws to push around the lens until the optical axis is centered correctly, and then inject the adhesive through injection holes to hold it in place. The screws could then be removed if necessary.
+If there is some cocentricity error between the optical axis and the physical axis, we can drill threaded holes and use nylon screws to push around the lens until the optical axis is centered correctly, and then inject the adhesive through injection holes to hold it in place. The screws could then be removed if necessary.
 
 We could also use tangential or spherical seats on the mount to allow the optic to self-center, although these seats would have to be precisely machined and there would need to be enough room between the edges of the lens and the mount to allow for the lens to move to its optically centered position.
 
-This cocentricity error would add time and cost to the assembly process because it requires a custom alignment of each optical element, which is time consuming and expensive because a human has to do it.
+This cocentricity error would add time and cost to the assembly process because it requires a custom alignment of each optical element, which is time consuming and expensive because it requires a human.
 \end{homeworkSection}
 
 \begin{homeworkSection}{(c)}
-
+Assuming we mount the mirror on 3 points at $0.645 r$ for minimum RMS self-weight deflection, we can use the following equation (from Katie Schwertz's thesis):
 \begin{equation}
 \delta_{RMS}=0.316 \frac{\rho g}{E} \frac{r^4}{t^2} (1-\nu^2)
 \end{equation}
@@ -197,7 +197,7 @@ Solving this for the thickness $t$, we get:
 t=0.5621 \sqrt{\frac{\rho g}{E} \frac{r^4}{\delta_{RMS}} (1-\nu^2)}
 \end{equation}
 
-We have $E= \SI{90.3}{\giga\pascal}$, $\rho = \SI{2.53}{\gram\per\cubic\centi\meter}$, and $\nu = 0.24$ for Zerodur. These values give:
+We have $E= \SI{90.3}{\giga\pascal}$, $\rho = \SI{2.53}{\gram\per\cubic\centi\meter}$, and $\nu = 0.24$ for Zerodur. $\delta_{RMS} = \lambda/20 = \SI{633}{\nano\meter}/20 = \SI{31.7}{\nano\meter} $ These values give:
 $$
 t = \SI{36.2}{\milli\meter}
 $$
@@ -205,6 +205,8 @@ which gives an estimated mass of:
 $$
 m = \pi r^2 t \rho = \SI{6.48}{\kilo\gram}
 $$
+
+To allow for thermal expansion of the base plate without distorting the mirror, we can mount the mirror onto the baseplate using a 3 V-groove setup, which will allow for thermal expansion about the center of the mount.
 
 Source for Zerodur physical properties:
 \url{http://www.us.schott.com/advanced_optics/english/syn/advanced_optics/products/optical-materials/zerodur-extremely-low-expansion-glass-ceramic/zerodur/index.html}
