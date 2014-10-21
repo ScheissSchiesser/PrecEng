@@ -197,7 +197,7 @@ Solving this for the thickness $t$, we get:
 t=0.5621 \sqrt{\frac{\rho g}{E} \frac{r^4}{\delta_{RMS}} (1-\nu^2)}
 \end{equation}
 
-We have $E= \SI{90.3}{\giga\pascal}$, $\rho = \SI{2.53}{\gram\per\cubic\centi\meter}$, and $\nu = 0.24$ for Zerodur. $\delta_{RMS} = \lambda/20 = \SI{633}{\nano\meter}/20 = \SI{31.7}{\nano\meter} $ These values give:
+We have $E= \SI{90.3}{\giga\pascal}$, $\rho = \SI{2.53}{\gram\per\cubic\centi\meter}$, and $\nu = 0.24$ for Zerodur. $\delta_{RMS} = \lambda/20 = \SI{633}{\nano\meter}/20 = \SI{31.7}{\nano\meter} $. These values give:
 $$
 t = \SI{36.2}{\milli\meter}
 $$
@@ -210,6 +210,38 @@ To allow for thermal expansion of the base plate without distorting the mirror, 
 
 Source for Zerodur physical properties:
 \url{http://www.us.schott.com/advanced_optics/english/syn/advanced_optics/products/optical-materials/zerodur-extremely-low-expansion-glass-ceramic/zerodur/index.html}
+\end{homeworkSection}
+\end{homeworkProblem}
+
+\begin{homeworkProblem}
+\begin{homeworkSection}{(a)}
+Quadrature current takes advantage of the identity:
+\begin{equation} \label{eq:quad}
+\sin[2\pi ft + \phi(t)]\ =\ \underbrace{
+\sin(2\pi ft)\cdot \cos[\phi(t)]}_{\text {in-phase}
+}\ +\ \underbrace{
+\overbrace{
+\sin\left(2\pi ft + \tfrac{\pi}{2} \right)}^{\cos(2\pi ft)
+}\cdot \sin[\phi(t)]
+}_{\text {quadrature}}.
+\end{equation}
+% An applied sinusoidal voltage drives a sinusoidal current, with some phase difference $\phi$ between them. ~\ref{eq:quad} describes % the current signal. When the phase is such that the voltage and current are
+to allow you to apply a sinusoidal current signal by summing two sinusoidal signals that are \ang{90} out of phase. The phase term $\phi$ allows the control of the velocity (forward, backward, and speed).
+This is important because it allows stable control of linear motor speed without having to drive it with a constant DC signal, which is more efficient.
+
+Equation ~\ref{eq:quad} from \url{http://en.wikipedia.org/wiki/In-phase_and_quadrature_components} (sorry, it already had the \LaTeX \space markup).
+\end{homeworkSection}
+
+\begin{homeworkSection}{(b)}
+There is less current per channel with the 3-phase motor to achieve the same power as a single coil. You can also get a more consistent current profile with 3 phases vs. single phase.
+\end{homeworkSection}
+
+\begin{homeworkSection}{(c)}
+
+\end{homeworkSection}
+
+\begin{homeworkSection}{(d)}
+
 \end{homeworkSection}
 \end{homeworkProblem}
 
@@ -242,9 +274,9 @@ The resulting equation is the solution to a quadratic equation in $\beta$, and t
 \end{homeworkSection}
 
 \begin{homeworkSection}{(c)}
-Assuming no lubrication (not likely) and mild steel, the coefficient of friction is $\mu_{SS} = 0.57$, which gives an efficiency of $e_{SS} = 0.113$. Best case scenario, with a greasy surface and hard steel, $\mu_{SS, grs} = 0.029$, giving $e_{SS, grs} = 0.724$.
+Assuming no lubrication (not likely) and hard steel, the coefficient of friction is $\mu_{SS} = 0.78$, which gives an efficiency of $e_{SS} = 0.0839$, or about $8.4\%$.
 
-With steel on oil-impregnated brass, the coefficient of friction is  $\mu_{SS} = $
+With steel on oil-impregnated brass, the coefficient of friction is  $\mu_{SB} = 0.19 $ which gives $e_{SS} = 0.283$, or about $28\%$.
 
 Coefficients of friction from \url{http://www.engineershandbook.com/Tables/frictioncoefficients.htm}
 \end{homeworkSection}
